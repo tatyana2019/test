@@ -1,0 +1,19 @@
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});var number1 = 1;
+var number2 = 3;
+var number3 = 5;
+var number4 = number1 + number2 + number3;
+console.log(number4);
+pm.test("Is json",function(){
+    pm.response.to.be.json;
+});
+
+pm.test("test field ['x-forwarded-port']", function () {
+    var jsonData = pm.response.json();
+var number5=jsonData.headers['x-forwarded-port'];
+console.log(number5);
+var number6 = Number(number5)+3;
+console.log(number6);
+});
